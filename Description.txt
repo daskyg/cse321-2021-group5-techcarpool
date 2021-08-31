@@ -1,0 +1,15 @@
+Group Name: Algo
+
+Members in the Group: Saugat Sharma, Julian Garcia
+
+Project Idea: Tech-Carpool
+
+Background:
+
+There's a fair amount of Techies who don’t have vehicles of their own. Many students have to rely solely on their friends and luck to get rides to places they need to be, many of whom are trying to get to ABQ to visit family or friends, there are even some out-of-state students who have hope that one of their friends will have the time to drive them to the airport to get home during school breaks.  There are also even students who live off campus, in Socorro, that struggle to get to class on time without a reliable vehicle. On the flip side of this, there are students who are commuting every day from ABQ to get to campus, and they'd most likely appreciate the opportunity to save money on gas in exchange for offering some other students a ride. All in all, this service could really benefit our community and could even help off campus students develop new friendships around campus. This could also help with Tech’s constant lack of parking spots if students with rides of their own decide to carpool with someone else, and in that case it'd also somewhat help us be a greener campus by reducing some carbon emissions.
+
+Goal:
+
+The goal is to build a carpool website so students without vehicles aren’t left without any reliable options for necessary commutes,  and to help reduce the congestion of vehicles on campus while ideally making our campus greener in terms of carbon emissions. On this website, students can lay out the commutes they need to make, or the commutes they’re offering, and connect with whichever students are planning the same commute.
+
+
