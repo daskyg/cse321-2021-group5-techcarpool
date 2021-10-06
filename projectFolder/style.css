@@ -183,6 +183,17 @@ li a:hover {
 	border:1px solid grey;
 }
 
+.row {
+	display: flex; /* equal height of the children */
+	border: none;
+}
+
+.col {
+	flex: 1; /* additionally, equal width */
+
+	padding: 1em;
+	border: none;
+}
 
 /*8-------------------------------------------------------------------------------------------------8*/
 
@@ -221,26 +232,15 @@ h4{
 
 .ps {
 	margin-bottom: 40px;
-}
-
-.ps a{
 	display: inline-block;
-	margin: 0 30px;
 	width: 160px;
 	height: 160px;
 	overflow: hidden;
 	border-radius: 50%;
 }
 
-.ps a img{
+.ps img{
 	width: 100%;
-	filter: grayscale(100%);
-	transition:  0.4s all;
-}
-
-.ps a:hover > img {
-	filter: none;
-
 }
 
 .section {
@@ -264,5 +264,5 @@ h4{
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 22px;
-
+	color: white;
 }
