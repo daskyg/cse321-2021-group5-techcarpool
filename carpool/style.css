@@ -38,19 +38,14 @@ strong{
 html {
 	scroll-behavior: smooth;
 }
-@media screen and (min-width: 400px) {
 
+@media screen and (min-width: 600px) {
 
-	img {
-	  display: block;
-	  max-width:200px;
-	  max-height:95px;
-	  width: auto;
-	  height: auto;
+	:root {
+		/*redefine font size for smaller screen*/
+		--fs1:  10px;
+		--fs2:  8px;
 	}
-}
-
-@media screen and (min-width: 800px) {
 
 	img {
 	  display: block;
