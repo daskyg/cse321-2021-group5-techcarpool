@@ -8,29 +8,40 @@ body{
 }
 
 @media screen and (min-width: 400px) {
-img {
-  display: block;
-  max-width:400px;
-  max-height:95px;
-  width: auto;
-  height: auto;
-}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	img {
+	  display: block;
+	  max-width:400px;
+	  max-height:95px;
+	  width: auto;
+	  height: auto;
+	}
   body {
     background-color: #ffffff;
   }
 }
 
 @media screen and (min-width: 800px) {
-img {
-  display: block;
-  max-width:800px;
-  max-height:695px;
-  width: auto;
-  height: auto;
-}
+	html {
+		scroll-behavior: smooth;
+	}
+
+	img {
+	  display: block;
+	  max-width:800px;
+	  max-height:695px;
+	  width: auto;
+	  height: auto;
+	}
   body {
     background-color: #ffffff;
   }
+
+  
 .login-container{
 	height: 100vh;
 	width: 100%;
