@@ -1,34 +1,56 @@
+/*we can change this according to our own design*/
+:root{
+	--ff- primary:  "Source Sans Pro", Sans-serif;
 
-body{
-	font-family: "Source Sans Pro", Sans-serif ;
-	margin: 0;
-	font-size: 14px;
-	background-color: #ffffff;
-	color: #666;
+	/*font width*/
+	--fw-reg : 400;
+	--fw-bold: 900;
+
+	/*color*/
+	--clr-white: #ffffff;
+	--clr-dark: #303030;
+	--clr-purple: #723dbe;
+	--clr-shgray: #666;
+	--clr-accent: #16e0bd;
+
+	/*----font size---*/
+	--fs1:  14px;
+	--fs2:  12px;
+
+	/*box shadow*/
+	--bs: 0.25em 0.25em 0.75em  rgba(0,0,0,.25),
+	0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
+
+body{
+	font-family: var(--ff-primary);
+	margin: 0;
+	font-size: var(--fs1);
+	background-color: var(--clr-white);
+	color: var(--clr-shgray);
+}
+
+strong{
+	font-weight: var(--fw-bold);
+}
+
+html {
+	scroll-behavior: smooth;
+}
 @media screen and (min-width: 400px) {
 
-	html {
-		scroll-behavior: smooth;
-	}
 
 	img {
 	  display: block;
-	  max-width:400px;
+	  max-width:200px;
 	  max-height:95px;
 	  width: auto;
 	  height: auto;
 	}
-  body {
-    background-color: #ffffff;
-  }
 }
 
 @media screen and (min-width: 800px) {
-	html {
-		scroll-behavior: smooth;
-	}
 
 	img {
 	  display: block;
@@ -37,11 +59,9 @@ body{
 	  width: auto;
 	  height: auto;
 	}
-  body {
-    background-color: #ffffff;
-  }
+}
 
-  
+
 .login-container{
 	height: 100vh;
 	width: 100%;
@@ -55,18 +75,18 @@ body{
 }
 
 .form-control {
-	font-size: 15px;
+	font-size: var(--fs1);
 	min-height: 48px;
-	font-weight: 500;
+	font-weight: var(--fw-reg);
 }
 
 .form-control:focus {
-	border-color: #723dbe;
-	box-shadow: 0 0 0 0.2rem rgba(114, 61, 190, 0.25);
+	border-color: var(--clr-purple);
+	box-shadow: var(--bs);
 }
 
 .forgot-link {
-	font-size: 13px;
+	font-size: var(--fs2);
 }
 
 .forgot-link label {
@@ -77,11 +97,11 @@ body{
 
 .login-form a {
 	text-decoration: none;
-	color: #666;
+	color: var(--clr-shgray);
 }
 
 .login-form a:hover {
 
-	color: #723dbe;
+	color: var(--clr-purple);
 
 }
