@@ -1,6 +1,5 @@
 
 body{
-	font-family: ;
 	font-size: 14px;
 	background: #eee;
 	color: #666;
@@ -48,4 +47,9 @@ body{
 
 	color: #723dbe;
 
+}
+
+a {
+	color: white;
+	text-decoration: none;
 }
