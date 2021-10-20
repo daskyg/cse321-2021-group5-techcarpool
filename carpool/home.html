@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>map</title>
+	<link rel="stylesheet" type="text/css" href="home.css">
+
+</head>
+<body>
+
+	<header>
+		<ul>
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">My Profile</a></li>
+		  <li><a href="#">My Trips</a></li>
+		  <li style="float:right"><a class="active" href="#about">Logout</a></li>
+		</ul>
+	</header>
+
+	<div class="container-fluid" id="myContainer">
+    <div class="row">
+
+      <div class="col-md-6 col-md-offset-3">
+
+        <h1> Plan your next trip now </h1>
+        <p class="lead"> Save Money! Save the Environmnent! </p>
+        <p class="bold"> You can save up to $1000 a semester  using NMT Carpool</p>
+
+        <!--Search Form -->
+        <form class="form-inline" method="get" id="searchForm">
+          <div class="form-group">
+            <label class="sr-only" for="departure">
+              Departure:
+            </label>
+            <input type="text" placeholder="Departure" name="departure" id="departure">
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="destination">
+              Destination:
+            </label>
+            <input type="text" placeholder="Destination" name="destination" id="destination">
+          </div>
+          <input type="submit" value="search" class = "btn btn-lg green" name = "search">
+        </form>
+        
+      </div>
+
+
+    </div>
+  </div>
+ 
+
+	<div id = "map"></div>
+	<script src="home.js" type="text/javascript">
+		
+	</script>
+	<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBhPskTlXJelYl3VNjg3SewwE48XUG5zM&callback=initMap">
+</script>
+
+
+
+<!-- footer --> 
+
+<footer class="footer">
+
+	<section class="current__news">
+
+		<h3 class="title">Current News </h3> 
+		<marquee>
+			<p>Carpool World has a social media-ish profile setup, where users can set profile pictures, describe their typical routes, and give a description of how flexible they are as a driver. We'd like to emulate that profile setup, with additional sections about their major at Tech, whether they're an undergrad or graduate, and an expanded description of what they're like as a person. Uber also does this more expanded profile management.</p>
+		</marquee>
+	</section>
+
+	<!--icon grabbed from font awsome-->
+	<h3>Social Network</h3>
+	<ul class="socials">
+		<li><a href="#" target="_blank">GitHub</i></a></li>
+		<li><a href="https://www.nmt.edu/" target="_blank">NMT</a></li>
+		<li><a href="#" target="_blank"> Website</a></li>
+	</ul>
+
+</footer>
+
+</body>
+</html>
