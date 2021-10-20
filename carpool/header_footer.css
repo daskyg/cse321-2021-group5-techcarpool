@@ -1,0 +1,65 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 60px;
+    margin-bottom: 60px;
+    overflow: scroll;
+}
+@media (max-width: 979px) {
+    body {
+        padding-top: 0px;
+    }
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+/*==================================================
+  Nearby People CSS
+  ==================================================*/
+
+.people-nearby .google-maps{
+    background: #f8f8f8;
+    border-radius: 4px;
+    border: 1px solid #f1f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.people-nearby .google-maps .map{
+    height: 300px;
+    width: 100%;
+    border: none;
+}
+
+.people-nearby .nearby-user{
+    padding: 20px 0;
+    border-top: 1px solid #f1f2f2;
+    border-bottom: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+}
+
+img.profile-photo-lg{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+iframe{
+    position:absolute;
+    padding-bottom: 4%;
+}
