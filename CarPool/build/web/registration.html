@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Registration</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        
+                        
+                        <form name = "myform" onsubmit="return myfunc()" class="register-form" id="register-form"  action = "registrationServlet" method= "get" >
+                            
+                             <div class="form-group">
+                                <label for="schoolId"><i class="zmdi zmdi-account-box-o"></i></label>
+                                <input type="number" name="schoolId" id="schoolId" placeholder="Student Id"  required = "" />
+                                <span id = "schoolIdMessage" style="color:red"> </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name"  required = "" />
+                                <span id = "nameMessage" style="color:red"> </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="NMT Email"  value = "" required="">
+                                <span id = "emailMessage" style="color:red"> </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password"  value = ""  required = ""/>
+                                <span id = "passwordMessage" style="color:red"> </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"  value = ""  required = ""/>
+                                 <span id = "re_passwordMessage" style="color:red"> </span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="education"><i class="zmdi zmdi-graduation-cap"></i></label>
+                                <input type="text" name="education" id="education" placeholder="Education"  required = ""/>
+                                 <span id = "educationMessage" style="color:red"> </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address"><i class="zmdi zmdi-google-maps"></i></label>
+                                <input type="text" name="address" id="address" placeholder="Address" value = ""  required = ""/>
+                                 <span id = "addressMessage" style="color:red"> </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="text" name="phone" id="phone" placeholder="Primary Phone"  value = ""  required = ""/>
+                                 <span id = "phoneMessage" style="color:red"> </span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="text" name="sec_phone" id="sec_phone" placeholder="Alternative Phone" />
+                                 <span id = "sec_phoneMessage" style="color:red"> </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term"  required = "" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="signup-image.jpg" alt="sing up image"></figure>
+                        <a href="./index.html" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    <!-- JS -->
+    <script src ="registration.js"> </script>
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

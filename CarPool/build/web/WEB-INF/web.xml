@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>carpoolServlet</servlet-name>
+        <servlet-class>carpoolServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registrationServlet</servlet-name>
+        <servlet-class>registrationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>riderRegistrationServlet</servlet-name>
+        <servlet-class>riderRegistrationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>contactUsServlet</servlet-name>
+        <servlet-class>contactUsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>carpoolServlet</servlet-name>
+        <url-pattern>/carpoolServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registrationServlet</servlet-name>
+        <url-pattern>/registrationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>riderRegistrationServlet</servlet-name>
+        <url-pattern>/riderRegistrationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>contactUsServlet</servlet-name>
+        <url-pattern>/contactUsServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
