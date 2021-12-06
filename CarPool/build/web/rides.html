@@ -21,6 +21,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -28,6 +29,28 @@
 
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
    <link href="assets/css/home.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+
+
+  <style>
+    #map {
+    width: 95%;
+    height: 450px;
+    background: grey;
+  }
+
+  #panel {
+    width: 100%;
+    height: 400px;
+    display: none;
+  }
+  </style>
+
 </head>
 <body>
 
@@ -69,24 +92,31 @@
 
 
 
-<div class="container">
+<div class="container" id="example2">
   <div class="form-group">
-    <label class="control-label">Starting Location:</label>
-    <input type="text" class="form-control" id="us3-address" />
+    <label class="control-label">Starting ZIP:</label>
+    <input type="text" class="form-control" name="zipcode1"/>
     <label class="control-label">End Location:</label>
-    <select class="form-select" aria-label="Default select example">
+    <select class="form-select" aria-label="Default select example" name="zipcode2">
       <option selected>Open this select menu</option>
       <option value="1">NMT Main Campus</option>
       <option value="2">EMRTC</option>
       <option value="3">Observatory</option>
     </select>
   </div>
+  <div class="text-error"></div>
+  <div class="row-fluid distance" style="display: none;">
+    <span class="label">Distance:</span> <span class="distance"></span>
+  </div>
 
   <div id="map"></div>
-  <!-- map -->
-    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=801%20Leroy%20Place" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <div id="panel"></div>
 
-  <div id="us3" style="height: 400px;"></div>
+<!--  <div id="map2"></div>-->
+  <!-- map -->
+<!--    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=801%20Leroy%20Place" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+
+<!--  <div id="us3" style="height: 400px;"></div>-->
 </div>
 
 
@@ -109,151 +139,17 @@
               <p class="text-muted">500m away</p>
             </div>
             <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Emma Johnson</a></h5>
-              <p>Heading to:</p>
-              <p>EMRTC</p>
-              <p class="text-muted">800m away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Nora Wilson</a></h5>
-              <p>Heading to:</p>
-              <p>M Mountain</p>
-              <p class="text-muted">2.5km away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Diana Amber</a></h5>
-              <p>Heading to:</p>
-              <p>NMT Main Campus</p>
-              <p class="text-muted">700m away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Addison Thomas</a></h5>
-              <p>Heading to:</p>
-              <p>NMT Main Campus</p>
-              <p class="text-muted">1.5km away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Jonathon Thompson</a></h5>
-              <p>Heading to:</p>
-              <p>NMT Main Campus</p>
-              <p class="text-muted">2km away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Olivia Steward</a></h5>
-              <p>Heading to:</p>
-              <p>NMT Main Campus</p>
-              <p class="text-muted">2km away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Elena Foster</a></h5>
-              <p>Heading to:</p>
-              <p>NMT Main Campus</p>
-              <p class="text-muted">4km away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Brian Walton</a></h5>
-              <p>Heading to:</p>
-              <p>NMT Main Campus</p>
-              <p class="text-muted">3km away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
-            </div>
-          </div>
-        </div>
-        <div class="nearby-user">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="profile-photo-lg">
-            </div>
-            <div class="col-md-7 col-sm-7">
-              <h5><a href="#" class="profile-link">Cris Haris</a></h5>
-              <p>Heading to:</p>
-              <p>NMT Main Campus</p>
-              <p class="text-muted">1km away</p>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <button class="btn btn-primary pull-right">Add Friend</button>
+              <!-- Large modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Show Profile</button>
+
+              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    ...
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
