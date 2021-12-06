@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="carpool">
+    <output-path>$PROJECT_DIR$/out/artifacts/carpool</output-path>
+    <root id="archive" name="carpool.war" />
+  </artifact>
+</component>
